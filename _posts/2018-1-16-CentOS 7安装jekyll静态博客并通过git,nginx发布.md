@@ -24,12 +24,25 @@ scl --list
 scl enable rh-ruby23 bash
 
 # 2. 安装jekyll及插件
-gem install jekyll jekyll-paginate
+gem install jekyll jekyll-paginate jekyll-seo-tag
+
+# 3. 打包
+cd myblog && jekyll build
 ```
 
 ### jekyll主题
 我们使用的主题来自 [huxpro.github.io](http://huxpro.github.io/)，并做了定制 可以从[github](https://github.com/Huxpro/huxpro.github.io)下载，效果图如下： 
 ![](http://ygjs-static-hz.oss-cn-beijing.aliyuncs.com/images/1.jpg)
+
+### 编译和预览
+
+jekyll默认生成的静态文件在_site目录，可以用下面的命令预览，该命令会在本地开启8000端口的http服务。
+
+```sh
+cd _site && python -m SimpleHTTPServer
+
+```
+
 
 ### nginx服务设置
 ```sh
