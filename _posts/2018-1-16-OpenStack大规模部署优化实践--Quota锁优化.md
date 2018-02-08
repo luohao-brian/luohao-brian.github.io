@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenStack大规模部署优化之三:Quota锁优化
+title: OpenStack大规模部署优化之三：Quota锁优化
 categories: Quota锁优化
 tags: [OpenStack]
 ---
