@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OpenStack大规模部署优化之三：Quota锁优化
+title: OpenStack大规模部署优化实践--Quota锁优化
 categories: Quota锁优化
 tags: [OpenStack]
 ---
@@ -13,7 +13,7 @@ tags: [OpenStack]
 ### 1、Quota模型
 Nova在对Quota管理过程中，在数据库中涉及到三张表，QUOTA_USAGE（当前已使用的配额）、QUOTA（描述组合配额上限）、RESERVATIONS（维护中间态资源配额），其中QUOTA_USAGE核心字段如下（后面两张表不做介绍）：
 ```
-ID    PROJECT_ID    RESOURCE    IN_USE    
+ID    PROJECT_ID    RESOURCE    IN_USE
 1    abc            cpu            10
 2    abc            memory        4096
 3    def            CPU            20
