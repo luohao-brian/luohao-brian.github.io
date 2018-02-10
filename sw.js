@@ -26,9 +26,9 @@ const PRECACHE_LIST = [
   "./css/hux-blog.min.css",
   "./css/syntax.css",
   "./css/bootstrap.min.css"
-  // "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css",
-  // "//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/fonts/fontawesome-webfont.woff2?v=4.6.3",
-  // "//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"
+  // "//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css",
+  // "//cdn.bootcss.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg",
+  // "//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js"
 ]
 const HOSTNAME_WHITELIST = [
   self.location.hostname,
