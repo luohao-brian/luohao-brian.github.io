@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nginx部署Let's Encrypt免费SSL证书
-tags: [SSL]
+tags: [前端技术]
 ---
 
 ### 申请Let's Encrypt永久免费SSL证书
