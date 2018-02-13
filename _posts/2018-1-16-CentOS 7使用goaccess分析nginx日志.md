@@ -1,8 +1,7 @@
 ---
 layout: post
 title: CentOS 7使用goaccess分析nginx日志
-categories: goaccess
-tags: [Linux, Golang]
+tags: [前端技术]
 ---
 > Web服务器如Nginx，Apache的access_log一般都包括了很多关键信息，可以用于性能分析或者运营分析，CentOS 7的EPEL源集成了一个非常好用access_log分析工具goaccess，本文主要记录了如何使用goaccess进行nginx的日志分析：
 
