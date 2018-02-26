@@ -1,9 +1,9 @@
 {
-    "name": "hux-blog",
-    "title": "Hux Blog",
-    "author": "Hux <huxpro@gmail.com>",
+    "name": "云谷计算",
+    "title": "yg | blog",
+    "author": "yg <luohao-brian@gmail.com>",
     "version": "1.7.0",
-    "homepage": "http://huxpro.github.io",
+    "homepage": "ygjs.tech",
     "repository": {
         "type": "git",
         "url": "https://github.com/Huxpro/huxpro.github.io"
