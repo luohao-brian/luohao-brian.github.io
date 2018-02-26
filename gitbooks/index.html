@@ -6,189 +6,140 @@ title: 云谷计算
 
 <!DOCTYPE html>
 <html class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>云谷计算 - Timeline</title>
-		<title>Hux - Timeline</title>
-		<link rel="stylesheet" type="text/css" href="css/timeline.css" />
-		<script src="js/modernizr.custom.js"></script>
-	</head>
-	<body>
-		<div class="container" style="margin:0;padding:0;width:100%;">
-			<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
-    			<div class="container">
-        			<div class="row">
-           				 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
-              			  	<div class="site-heading">
-                    		<h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
-                    <!--<hr class="small">-->
-                    		<span class="subheading">{{ page.description }}</span>
-                			</div>
-            			</div>
-       	 			</div>
-   				</div>
-			</header>
-			<div class="main">
-				<ul class="cbp_tmtimeline">
-					<li>
-						<div class="cbp_tmlabel">
-							<h2 id="boxoffice">Go语言圣经(中文版)</h2>
-							<time>2018-1</time>
-							<img src="images/work-wepiao-bo1.jpg">
-							<ul>
-								<li>
-									Go是一个开源的编程语言，它很容易用于构建简单、可靠和高效的软件。”（摘自Go语言官方网站：http://golang.org)Go是一个开源的编程语言，它很容易用于构建简单、可靠和高效的软件。”（摘自Go语言官方网站：http://golang.org),<b>本书是为了帮助你开始以有效的方式使用Go语言，充分利用语言本身的特性和自带的标准库去编写清晰地道的Go程序</b><a href="http://github.com/golang-china/gopl-zh">Go</a>
-								</li>
-								<li class="skill">
-									<span class="cbp_tmicon-phone"></span>
-									<!--span><b>JS</b></span>
-									<span class="i-react"></span-->
-									<span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/gopl-zh/">Read it</a></span>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<div class="cbp_tmlabel">
-							<h2 id="boxoffice">深入理解Neutron--OpenStack网络实现</h2>
-							<time>2018-1</time>
-							<img src="images/work-wepiao-bo.jpg">
-							<ul>
-								<li>
-									Neutron 是 OpenStack 项目中负责提供网络服务的组件，它基于软件定义网络的思想，实现了网络虚拟化下的资源管理。本书将剖析 Neutron 组件的原理和实现。
-								</li>
-								<li class="skill">
-									<!--span class="cbp_tmicon-phone"></span>
-									<span><b>JS</b></span>
-									<span class="i-react"></span-->
-									<span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/openstack_understand_Neutron/">Read it</a></span>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<div class="cbp_tmlabel">
-							<h2 id="busyweek">Go Web 编程</h2>
-							<time>2018-1</time>
-							<img src="images/work-busyweek.jpg">
-							<ul>
-								<li>
-									Go web编程是因为我喜欢Web编程,所以写了这本书.<br>
-								</li>
-								<li class="skill">
-									<!--span class="cbp_tmicon-phone"></span>
-									<span><b>JS</b></span>
-									<span class="i-vue"></span-->
-									<span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/build-web-application-with-golang/">Read it</a></span>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<div class="cbp_tmlabel">
-							<h2>Blockchain Tutorial</h2>
-							<time>2018-1</time>
-							<img src="images/intern-alitrip.jpg">
-							<ul>
-								<li>
-									最初，本教程最初是译自 <a href="https://github.com/Jeiwan/blockchain_go">Jeiwan/blockchain_go</a>的系列文章。随着对区块链认识的不断深入，我也会不断地进行补充和丰富。
-								</li>
-								<li class="skill">
-									<!--span class="cbp_tmicon-phone"></span>
-									<span><b>JS</b></span>
-									<a href="https://github.com/kissyteam/kissy"><span class="i-kissy"></span></a-->
-									<span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/blockchain-tutorial/">Read It</a></span>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<div class="cbp_tmlabel">
-							<h2>区块链技术指南</h2>
-							<img src="images/senova.jpg">
-							<ul>
-								<li>区块链技术是金融科技（Fintech）领域的一项重要技术创新。</li>
-								<li>作为分布式记账（Distributed Ledger Technology，DLT）平台的核心技术，区块链被认为在金融、征信、物联网、经济贸易结算、资产管理等众多领域都拥有广泛的应用前景。区块链技术自身尚处于快速发展的初级阶段，现有区块链系统在设计和实现中利用了分布式系统、密码学、博弈论、网络协议等诸多学科的知识，为学习原理和实践应用都带来了不小的挑战。</li>
-								<li>本书希望可以探索区块链概念的来龙去脉，剥茧抽丝，剖析关键技术原理，同时讲解实践应用。在开发相关开源分布式账本平台（如超级账本），以及设计基于区块链的企业方案过程中，笔者积累了一些实践经验，也通过本书一并分享出来，希望能推动区块链技术的早日成熟和更多应用场景的出现。</li>
-								<li class="skill">
-									<!--span class="cbp_tmicon-html"></span>
-									<span class="fa fa-css3"></span>
-									<span><b>JS</b></span-->
-									<span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/blockchain_guide/">Read It</a></span>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<div class="cbp_tmlabel">
-							<h2 id="hslider">从零开始完整学习全基因组测序数据分析</h2>
-							<time>2018-1</time>
-							<img src="images/work-hslider.jpg">
-							<ul>
-								<li>
-									基因测序已是时下热门，目前除了华大基因之外，其他分布于全中国的大型测序平台（HiSeq X 10）还有约10个，每个每年大概能完成1.8万人的高深度全基因组测序，加起来就是18万人，如果加上华大，可能需要翻倍！而且随着新技术的快速发展和成本的下降，正变得越来越普遍！再加上国家十三五规划提出了构建大规模中国人群队列基因组数据库的要求，全基因组测序技术正在逐渐替代其它测序手段，这也是我打算写这一个系列的原因
-								</li>
-								<li class="skill">
-									<!--span class="fa fa-css3"></span>
-									<span><b>JS</b></span>
-									<span class="i-jquery"></span-->
-									<span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/gene_sequencing_book/">Read It</a></span>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<div class="cbp_tmlabel">
-							<h2>Go语言实战笔记</h2>
-							<time>2018-01</time>
-							<img src="images/work-truth.jpg">
-							<ul>
-								<li>原文来自知乎<a href="https://zhuanlan.zhihu.com/go-in-action">《Go语言实战笔记》</a>，云谷计算整理。</li>
-								<li class="skill">
-									<!--span><b>Ae</b></span>
-									<span class="cbp_tmicon-video"></span-->
-									<span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/go-in-action-note/">Read It</a></span>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<div class="cbp_tmlabel">
-							<h2>Royluo's KVM学习笔记</h2>
-							<time>2018-01</time>
-							<img src="images/intern-lxu.jpg">
-							<ul>
-								<li>
-									文章来自<a href="http://royluo.org/categories/KVM/">Royluo博客</a>，云谷计算整理
-								</li>
-								<li class="skill">
-									<!--span><b>Ae</b></span>
-									<span class="cbp_tmicon-video"></span-->
-									<span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/interrupt-virtualization/">Read It</a></span>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<div class="cbp_tmlabel">
-							<h2>Linux Block Driver分析</h2>
-							<time>2018-01</time>
-							<img src="images/work-puzzle.jpg">
-							<ul>
-								<li>原文来自<a href="http://oliveryang.net/">Memory Dump In Cloud</a>，云谷计算整理</li>
-								<li class="skill">
-									<!--span class="cbp_tmicon-font"></span>
-									<span><b>Ps</b></span>
-									<span><b>Ae</b></span-->
-									<span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/linux-block-driver/">Read It</a></span>
-								</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>云谷计算 - Timeline</title>
+        <link rel="stylesheet" type="text/css" href="css/timeline.css" />
+        <script src="js/modernizr.custom.js"></script>
+    </head>
+    <body>
+        <div class="container" style="margin:0;padding:0;width:100%;">
+            <header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+                <div class="container">
+                    <div class="row">
+                         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 ">
+                            <div class="site-heading"  class="site-heading" style="padding: 55px 0px;margin-top: 28px">
+                            <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+                            <!--hr class="small"-->
+                            <span class="subheading">{{ page.description }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="main">
+                <ul class="cbp_tmtimeline" style="margin-top:0.1%;">
+                    <li>
+                        <div class="cbp_tmlabel">
+                            <h2 id="boxoffice">Go语言圣经(中文版)</h2>
+                            <time>2018-1</time>
+                            <img src="images/work-wepiao-bo1.jpg">
+                            <ul>
+                                <li>
+                                    Go是一个开源的编程语言，它很容易用于构建简单、可靠和高效的软件。”（摘自Go语言官方网站：http://golang.org)Go是一个开源的编程语言，它很容易用于构建简单、可靠和高效的软件。”（摘自Go语言官方网站：http://golang.org),<b>本书是为了帮助你开始以有效的方式使用Go语言，充分利用语言本身的特性和自带的标准库去编写清晰地道的Go程序</b><a href="http://github.com/golang-china/gopl-zh">Go</a>
+                                </li>
+                                <li class="skill">
+                                    <span class="cbp_tmicon-phone"></span>
+                                    <!--span><b>JS</b></span>
+                                    <span class="i-react"></span-->
+                                    <span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/gopl-zh/">Read it</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cbp_tmlabel">
+                            <h2 id="boxoffice">深入理解Neutron--OpenStack网络实现</h2>
+                            <time>2018-1</time>
+                            <img src="images/work-wepiao-bo.jpg">
+                            <ul>
+                                <li>
+                                    Neutron 是 OpenStack 项目中负责提供网络服务的组件，它基于软件定义网络的思想，实现了网络虚拟化下的资源管理。本书将剖析 Neutron 组件的原理和实现。
+                                </li>
+                                <li class="skill">
+                                    <!--span class="cbp_tmicon-phone"></span>
+                                    <span><b>JS</b></span>
+                                    <span class="i-react"></span-->
+                                    <span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/openstack_understand_Neutron/">Read it</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cbp_tmlabel">
+                            <h2 id="busyweek">Go Web 编程</h2>
+                            <time>2018-1</time>
+                            <img src="images/work-busyweek.jpg">
+                            <ul>
+                                <li>
+                                    Go web编程是因为我喜欢Web编程,所以写了这本书.<br>
+                                </li>
+                                <li class="skill">
+                                    <!--span class="cbp_tmicon-phone"></span>
+                                    <span><b>JS</b></span>
+                                    <span class="i-vue"></span-->
+                                    <span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/build-web-application-with-golang/">Read it</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cbp_tmlabel">
+                            <h2>Blockchain Tutorial</h2>
+                            <time>2018-1</time>
+                            <img src="images/intern-alitrip.jpg">
+                            <ul>
+                                <li>
+                                    最初，本教程最初是译自 <a href="https://github.com/Jeiwan/blockchain_go">Jeiwan/blockchain_go</a>的系列文章。随着对区块链认识的不断深入，我也会不断地进行补充和丰富。
+                                </li>
+                                <li class="skill">
+                                    <!--span class="cbp_tmicon-phone"></span>
+                                    <span><b>JS</b></span>
+                                    <a href="https://github.com/kissyteam/kissy"><span class="i-kissy"></span></a-->
+                                    <span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/blockchain-tutorial/">Read It</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cbp_tmlabel">
+                            <h2>区块链技术指南</h2>
+                            <img src="images/senova.jpg">
+                            <ul>
+                                <li>区块链技术是金融科技（Fintech）领域的一项重要技术创新。</li>
+                                <li>作为分布式记账（Distributed Ledger Technology，DLT）平台的核心技术，区块链被认为在金融、征信、物联网、经济贸易结算、资产管理等众多领域都拥有广泛的应用前景。区块链技术自身尚处于快速发展的初级阶段，现有区块链系统在设计和实现中利用了分布式系统、密码学、博弈论、网络协议等诸多学科的知识，为学习原理和实践应用都带来了不小的挑战。</li>
+                                <li>本书希望可以探索区块链概念的来龙去脉，剥茧抽丝，剖析关键技术原理，同时讲解实践应用。在开发相关开源分布式账本平台（如超级账本），以及设计基于区块链的企业方案过程中，笔者积累了一些实践经验，也通过本书一并分享出来，希望能推动区块链技术的早日成熟和更多应用场景的出现。</li>
+                                <li class="skill">
+                                    <!--span class="cbp_tmicon-html"></span>
+                                    <span class="fa fa-css3"></span>
+                                    <span><b>JS</b></span-->
+                                    <span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/blockchain_guide/">Read It</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="cbp_tmlabel">
+                            <h2 id="hslider">从零开始完整学习全基因组测序数据分析</h2>
+                            <time>2018-1</time>
+                            <img src="images/work-hslider.jpg">
+                            <ul>
+                                <li>
+                                    基因测序已是时下热门，目前除了华大基因之外，其他分布于全中国的大型测序平台（HiSeq X 10）还有约10个，每个每年大概能完成1.8万人的高深度全基因组测序，加起来就是18万人，如果加上华大，可能需要翻倍！而且随着新技术的快速发展和成本的下降，正变得越来越普遍！再加上国家十三五规划提出了构建大规模中国人群队列基因组数据库的要求，全基因组测序技术正在逐渐替代其它测序手段，这也是我打算写这一个系列的原因
+                                </li>
+                                <li class="skill">
+                                    <!--span class="fa fa-css3"></span>
+                                    <span><b>JS</b></span>
+                                    <span class="i-jquery"></span-->
+                                    <span class="link"><a target="_blank" href="http://ygjs.tech/static/gitbooks/gene_sequencing_book/">Read It</a></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </body>
 </html>
