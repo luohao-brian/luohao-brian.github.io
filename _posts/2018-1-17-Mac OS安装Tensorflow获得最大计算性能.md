@@ -8,7 +8,7 @@ tags: [人工智能]
 
 ------
 
-```
+```sh
 W tensorflow/core/platform/cpu_feature_guard.cc:95] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
 W tensorflow/core/platform/cpu_feature_guard.cc:95] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
 ```
@@ -31,19 +31,19 @@ https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 #### 3. 安装bazel, git
 
-```
+```sh
 brew install bazel git
 ```
 
 #### 4. 获取tensorflow源码
 
-```
+```sh
 git clone https://github.com/tensorflow/tensorflow
 ```
 
 #### 5. 安装依赖的python包
 
-```
+```sh
 sudo pip install six numpy wheel
 ```
 
@@ -54,20 +54,22 @@ sudo pip install six numpy wheel
 
 #### 7. 编译tensorflow
 编译成功后，会在/tmp/tensorflow_pkg目录中生成安装包。
-```
+
+```sh
 bazel build --config=opt //tensorflow/tools/pip_package:build_pip_package
 bazel-bin/tensorflow/tools/pip_package/build_pip_package /tmp/tensorflow_pkg
 ```
 #### 8. 安装tensorflow
 
-```
+```sh
 sudo pip install --upgrade /tmp/tensorflow_pkg/tensorflow-1.4.0-xxx.whl
 ```
 
 ### 验证
 
 写一个下面的小程序，用python执行以下，会发现刚才的SSE, AVX警告没有了。
-```
+
+```python
 # Python
 import tensorflow as tf
 hello = tf.constant('Hello, TensorFlow!')

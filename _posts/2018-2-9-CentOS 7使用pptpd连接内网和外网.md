@@ -18,13 +18,14 @@ tags: [Linux]
 ### 过程
 
 服务器端安装软件pptpd；
-```
+
+```bash
 yum install -y pptpd
 ```
 
 配置pptpd, vpn网络为10.1.1.0/24，公有云服务器的vpn网络地址为10.1.1.1，从内网拨号上来的主机地址范围从为10.1.1.10到10.1.1.100；
 
-```
+```bash
 vim /etc/pptpd.conf
 localip 10.1.1.1
 remoteip 10.1.1.10,10.1.1.100
@@ -32,7 +33,7 @@ remoteip 10.1.1.10,10.1.1.100
 
 内网拨号上来的主机将分配8.8.8.8和8.8.4.4的dns服务地址；
 
-```
+```bash
 vim /etc/ppp/options.pptpd 
 ms-dns 8.8.8.8 
 ms-dns 8.8.4.4
@@ -40,7 +41,7 @@ ms-dns 8.8.4.4
 
 拨号所使用的简单认证信息，用户名test，密码123456；
 
-```
+```bash
 vim /etc/ppp/chap-secrets
 
 
@@ -51,7 +52,7 @@ test pptpd 123456 *
 
 重启pptpd服务
 
-```
+```bash
 systemctl start pptpd
 systemctl enable pptpd
 ```
