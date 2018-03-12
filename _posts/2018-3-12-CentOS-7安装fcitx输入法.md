@@ -1,7 +1,7 @@
 ---
-layout:post
-title:CentOS 7安装fcitx输入法
-tags:[Linux]
+layout: post
+title: CentOS-7安装fcitx输入法
+tags: [Linux]
 ---
 
 ### EPEL

@@ -1,10 +1,11 @@
 ---
-layout:post
-title:CentOS 7使用pypy让python程序性能提升10倍
-tags:[python]
+layout: post
+title: CentOS-7使用pypy让python程序性能提升10倍
+tags: [python]
 ---
 
 ### EPEL REPO
+
 ```bash
 [epel]
 name=epel
