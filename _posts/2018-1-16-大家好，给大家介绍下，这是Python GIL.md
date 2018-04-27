@@ -27,7 +27,7 @@ GIL的问题其实是由于近十几年来应用程序和操作系统逐步从�
 
 ### GIL测试
 t1: 2个线程依次执行count down 100,000,000
-```
+```python
 #! /usr/bin/python
 from threading import Thread
 import time
@@ -50,7 +50,7 @@ if __name__ == '__main__':
 ```
 
 t2: 2个线程并发执行count down 100,000,000
-```
+```python
 #! /usr/bin/python
 from threading import Thread
 import time
@@ -75,7 +75,7 @@ if __name__ == '__main__':
 ```
 
 在我的两核心Intel i5 Macbook上，两个程序用python 2.7解析执行，理论上，在一个双核处理器上，t2应该比t1少用一半的时间，可是实际上，t2居然比t1多用了一倍以上的时间，这是一种多么重的领悟。。。
-```
+```sh
 LuodeMacBook-Pro:Documents hluo$ python t1.py
 
 Total time: 11.8666779995
@@ -88,7 +88,7 @@ Total time: 23.9497878551
 ### 如何避免受到GIL的影响
 `用多进程(multi-process)替代多线程(multi-thread):`我在最近两年的实际项目中多次使用了多线程，踩了很多坑，特别是在程序压力增大的时候，很多任务迟迟不能被调度执行导致超时失败，我因此才开始比较深入的关注GIL等问题，现在也能理解为什么如OpenStack这样的大型Python项目都是使用的多进程，或者是协程的方式。
 `使用Python 3.2+:`Python 3.2对GIL做了比较深入的优化，上面的程序如果用python 3.6解析执行，结果会好很多，但是距离理论预期还是有较大距离。
-```
+```sh
 LuodeMacBook-Pro:Documents hluo$ python3 t1.py
 
 Total time: 13.256227254867554
