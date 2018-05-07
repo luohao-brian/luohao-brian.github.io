@@ -8,7 +8,6 @@ tags: [Linux]
 
 ```
 yum install centos-release-scl && yum -y update
-
 ```
 
 ### [](#安装mariadb-102)安装mariadb 10.2
@@ -16,7 +15,6 @@ yum install centos-release-scl && yum -y update
 ```
 yum --enablerepo=centos-sclo-rh -y install rh-mariadb102-mariadb-server
 yum install rh-mariadb102
-
 ```
 
 ### [](#启动时自动设置mariadb102)启动时自动设置mariadb10.2
@@ -28,7 +26,6 @@ yum install rh-mariadb102
 
 source /opt/rh/rh-mariadb102/enable
 export X_SCLS="`scl enable rh-mariadb102 'echo $X_SCLS'`"
-
 ```
 
 ### [](#配置并启动mariadb102)配置并启动mariadb10.2
@@ -142,7 +139,6 @@ MariaDB [(none)]> show databases;
 
 MariaDB [(none)]> exit
 Bye
-
 ```
 
 ### [](#参考)参考
