@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 不要完全相信Linux Top：超线程（Hyperthreading）深入浅出
-tags: [Linux]
+tags: [系统优化]
 ---
 ### 超线程的技术原理
 超线程技术在一个物理核上模拟两个逻辑核，两个逻辑核具有各自独立的寄存器（eax、ebx、ecx、msr等等）和APIC，但会共享使用物理核的执行资源，包括执行引擎、L1/L2缓存、TLB和系统总线等等。

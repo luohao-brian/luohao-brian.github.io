@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CentOS 7使用nbd挂载qcow2虚拟机镜像
-tags: [Linux]
+tags: [虚拟化]
 ---
 
 ### 背景

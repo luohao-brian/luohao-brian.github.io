@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Openstack学习：从创建配置虚拟机开始
-tags: [虚拟化]
+tags: [OpenStack]
 ---
 
 对于初学者而言，openstack的架构和内容实在太多太复杂了，我们不妨从创建一个最基本的虚拟机入手，逐步了解和学习其中涉及的各种技术和知识。

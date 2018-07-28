@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Linux系统优化与调试之三 - 随手给Linux服务器CPU加一些压力
-categories: Linux
-tags: [Linux]
+categories: 系统优化
+tags: [系统优化]
 ---
 
 > 很多服务器上Linux系统是最小化安装，没有额外的压力工具，有时候只是想随手给CPU加一些背景压力，这几天参考了一些很有趣的脚本，非常巧妙的实现了这个，其中的思路值得学习。

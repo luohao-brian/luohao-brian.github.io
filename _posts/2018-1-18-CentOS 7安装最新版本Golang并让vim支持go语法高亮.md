@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CentOS 7安装最新版本Golang并让vim支持go语法高亮
-tags: [Golang, Linux]
+tags: [VIM]
 ---
 
 > 这篇文章是我学习Golang的第一篇记录，从编程环境搭建和优化开始。CentOS 7默认对Golang的不是很完善，比如Golang版本很低，而且vim编辑器也不支持go语法高亮。

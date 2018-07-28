@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Linux系统优化与调试之二 - 压力测试神器stress-ng
-categories: Linux
-tags: [Linux]
+categories: 系统优化
+tags: [系统优化]
 ---
 
 > 工欲成其事，必先善其器，CentOS 7的EPEL源包含了2个压力测试工具，一个是标准的stress, 另外一个是更强大的stress-ng，可以帮助模拟产生各种cpu压力。
