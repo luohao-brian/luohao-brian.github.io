@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Linux系统优化与调试之二：压力测试神器stress-ng
+title: Linux系统优化与调试之二 - 压力测试神器stress-ng
 categories: Linux
 tags: [Linux]
 ---
