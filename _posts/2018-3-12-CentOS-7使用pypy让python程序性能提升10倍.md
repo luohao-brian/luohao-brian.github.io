@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CentOS-7使用pypy让python程序性能提升10倍
-tags: [python]
+tags: [Python]
 ---
 
 ### EPEL REPO

@@ -9,7 +9,7 @@ tags: [云计算]
 -------
 ![](http://ygjs-static-hz.oss-cn-beijing.aliyuncs.com/images/2018-1-17/3.jpeg)
 
-![](http://ygjs-static-hz.oss-cn-beijing.aliyuncs.com/images/2018-1-17/4.jpeg))
+![](http://ygjs-static-hz.oss-cn-beijing.aliyuncs.com/images/2018-1-17/4.jpeg)
 
 ### 基础设施
 
