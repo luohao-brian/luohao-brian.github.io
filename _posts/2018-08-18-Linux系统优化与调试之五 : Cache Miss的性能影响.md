@@ -17,6 +17,8 @@ tags: [系统优化]
 
 用`perf stat -e cache-misses ./a.out`可以看出，前者cache-miss数量117,056， 而后者仅有26,274。
 
+造成大量cache miss的测试代码：
+
 ```c
 #define NUM 393216
 
@@ -37,8 +39,11 @@ int add(int *a,int *b,int num){
 }
 ```
 
+优化cache miss后的测试代码：
+
 ```c
 #define NUM 39216
+
 typedef struct{
     float a;
     float b;
