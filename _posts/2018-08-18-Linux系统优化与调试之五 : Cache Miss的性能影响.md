@@ -21,7 +21,9 @@ tags: [系统优化]
 
 ```c
 #include <stdlib.h>
+
 #define MISS 39321600
+
 
 int main(){
     int *p = (int*)malloc(MISS * sizeof(int));
@@ -36,7 +38,9 @@ int main(){
 
 ```c
 #include <stdlib.h>
+
 #define MISS 39321600
+
 
 int main(){
     int *p = (int*)malloc(MISS * sizeof(int));
