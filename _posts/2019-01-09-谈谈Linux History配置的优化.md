@@ -6,6 +6,12 @@ tags: [Linux]
 
 ### Pain #1 - 不带时间戳，不知道命令是什么时候发生的
 
+默认情况下 history 命令直接显示用户执行的命令而不会输出运行命令时的日期和时间，即使 history 命令记录了这个时间。
+
+运行 history 命令时，它会检查一个叫做 HISTTIMEFORMAT 的环境变量，这个环境变量指明了如何格式化输出 history 命令中记录的这个时间。
+
+若该值为 null 或者根本没有设置，则它跟大多数系统默认显示的一样，不会显示日期和时间。
+
 ```
 echo 'export HISTTIMEFORMAT="%F %T "' >> ~/.bashrc
 ```
@@ -27,7 +33,10 @@ echo 'export HISTTIMEFORMAT="%F %T "' >> /etc/profile
  5 2017-08-16 15:30:15 sysdig proc.name=sshd
  6 2017-08-16 15:30:15 sysdig proc.name=sshd | more
 ```
+
 ### Pain #2 - 默认只保留500条记录
+
+history读取环境变量HISTFILESIZE和HISTSIZE配置记录和显示的历史命令记录数量，默认是500， 可以改大一些:
 
 ```
 # 设置历史记录条数
