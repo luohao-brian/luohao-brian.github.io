@@ -6,7 +6,7 @@ tags: [虚拟化]
 
 ### 背景
 
-Linux KVM虚拟机由qemu加载和引导，虚拟机的运行内存也都映射在qemu进程空间里面，导致qemu的rss内存一般都很大，比如：
+Linux KVM虚拟机由qemu加载和引导，虚拟机的运行内存也都映射在qemu进程空间里面，导致qemu的rss内存一般都很大，比如这两个qemu虚拟机，看起来差不多分别是16G和8G内存规格的，都使用了2G左右的物理内存。如果qemu进程由于任何bug发生core dump, 可能会导致产生一个非常巨大的core文件。
 
 ```
 top - 12:46:02 up 6 days, 13:17,  5 users,  load average: 1.14, 1.22, 1.72
@@ -20,7 +20,6 @@ KiB Swap:        0 total,        0 free,        0 used. 18959481+avail Mem
 4157696 root      20   0 9770.2m 1.474g  22676 S   2.0  0.8   6:38.13 qemu-system-x86
 ```
 
-如果qemu进程由于任何bug发生core dump, 这就导致产生一个非常巨大的core文件。
 
 ### 解决办法
 
