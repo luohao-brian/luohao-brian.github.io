@@ -54,7 +54,7 @@ high     10708
 high     1168843
 ```
 
-![image](https://github.com/luohao-brian/luohao-brian.github.io/blob/master/img/kswapd0.png?raw=true)
+![image](https://raw.githubusercontent.com/luohao-brian/luohao-brian.github.io/master/img/posts-2019/kswapd0.png)
 
 
 kswapd用来检查`pages_high`和 `pages_low`，如果可用内存少于 `pages_low`，kswapd 就开始扫描并试图释放 32个页面，并且重复扫描释放的过程直到可用内存大于`pages_high` 为止。扫描的时候检查3件事：
