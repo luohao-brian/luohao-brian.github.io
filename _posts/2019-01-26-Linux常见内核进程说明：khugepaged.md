@@ -30,18 +30,19 @@ tags: [Linux]
 
 关闭THP：
 
-1. kernel的启动参数可以通过传入：
+kernel的启动参数可以通过传入：
 
 ```
 transparent_hugepage=never
 ```
 
-2. 系统启动后:
+系统启动后:
+
 ```
 echo never > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 
-3. khugepaged 主要配置：
+khugepaged 主要配置：
 
 配置 | 说明
 ---|---
