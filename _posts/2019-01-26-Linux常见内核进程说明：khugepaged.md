@@ -10,12 +10,11 @@ tags: [Linux]
 
 假设我们把Linux Page Size增加到16M，那么同样一个容纳64个元素的TLB Cache就能顾及64x16M = 1G的内存热点数据，这样的大小相较上文的256K就显得非常适合实际应用了。像这种将Page Size加大的技术就是Huge Page。
 
-开启THP(Transparent Huge Page)系统会产生一个khugepaged进程，他是THP的后台守护进程，主要功能是定时唤醒，根据配置尝试将4k 的普通page转成2M等巨页，减少TLB压力，提高内存使用效率。
-
 ![image](https://raw.githubusercontent.com/luohao-brian/luohao-brian.github.io/master/img/posts-2019/tlb_lookup.png)
 
 可以看出，如果一个页面被TLB缓存了，地址转换只需要1个CPU cycle, 而完整的页表查询，需要100个cycles。
 
+开启THP(Transparent Huge Page)系统会产生一个khugepaged进程，他是THP的后台守护进程，主要功能是定时唤醒，根据配置尝试将4k 的普通page转成2M等巨页，减少TLB压力，提高内存使用效率。
 
 ### 内存大页在NUMA系统上的负面影响
 
