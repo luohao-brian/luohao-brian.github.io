@@ -3,9 +3,10 @@ layout: post
 title: Linux常见内核进程说明 - kswapd和kcompactd
 tags: [Linux]
 ---
+
 ### kswapd
 
-kswapd内核进程在每个numa节点上运行一个，该线程每100毫秒起来工作一次，或者由于别的进程分配内存失败，而被唤醒。
+kswapd内核进程在每个numa节点上运行一个。下面是一个2P服务器上kswap的分布情况，kswapd0和kswapd1分别运行在cpu38和cpu27上，他们在两个不同的numa节点上。
 
 ```
 # ps -eF|grep kswap
@@ -13,7 +14,20 @@ root         315       2  0     0     0  38 Apr22 ?        00:00:55 [kswapd0]
 root         316       2  0     0     0  27 Apr22 ?        00:00:57 [kswapd1]
 ```
 
-如果是kswapd定期唤醒，它的任务就是让每一个zone的空闲内存都超过高水位。 Linux内核维护了3条内存水位线:
+Linux为每个numa节点通过一个zone来维护空闲内存。空闲内存按照2^N页面大小，分别挂入不同的链表。`/proc/buddyinfo`反映了每个node节点空闲内存的分布。比如下面在numa节点0上，目前有3466个4k内存页，3691个8k内存页；
+
+```
+# cat /proc/buddyinfo
+Node 0, zone      DMA      1      1      1      0      2      1      1      0      1      1      3
+Node 0, zone    DMA32    862    670    352    346    198     88     38     22     27     12     62
+Node 0, zone   Normal   3466   3691   1647    708    228    256      0      0      0      0      0
+Node 1, zone   Normal    753 264718 173632 122550  31937    345     93     72      4      4      1
+```
+kswapd线程每100毫秒起来工作一次，或者由于别的进程分配内存失败，而被唤醒。如果是kswapd定期唤醒，它的任务就是让每一个zone的空闲内存都超过高水位。 Linux内核维护了3条内存水位线。
+
+![image](https://raw.githubusercontent.com/luohao-brian/luohao-brian.github.io/master/img/posts-2019/kswapd0.png)
+
+### 内存水位线
 
 `pages_min`
 
@@ -46,24 +60,35 @@ min      779229
 
 ```
 #cat /proc/zoneinfo  | grep low
-low      78
-low      8923
-low      974036
+        low      4
+        low      468
+        low      35001
+        low      0
+        low      0
+        low      0
+        low      0
+        low      36132
+        low      0
+        low      0
 ```
 
 `pages_high`
 
 ```
 #cat /proc/zoneinfo  | grep high | grep -v :
-high     94
-high     10708
-high     1168843
+        high     7
+        high     789
+        high     58991
+        high     0
+        high     0
+        high     0
+        high     0
+        high     60897
+        high     0
+        high     0
 ```
 
-![image](https://raw.githubusercontent.com/luohao-brian/luohao-brian.github.io/master/img/posts-2019/kswapd0.png)
-
-
-kswapd用来检查`pages_high`和 `pages_low`，如果可用内存少于 `pages_low`，kswapd 就开始扫描并试图释放 32个页面，并且重复扫描释放的过程直到可用内存大于`pages_high` 为止。扫描的时候检查3件事：
+在上面的例子中，numa节点0的low和high分别为35001和58991，节点1的分别为36132和60897。kswapd用来检查`pages_high`和 `pages_low`，如果可用内存少于 `pages_low`，kswapd 就开始扫描并试图释放 32个页面，并且重复扫描释放的过程直到可用内存大于`pages_high` 为止。扫描的时候检查3件事：
 
 * 如果页面没有修改，把页放到可用内存列表里；
 * 如果页面被文件系统修改，把页面内容写到磁盘上；
