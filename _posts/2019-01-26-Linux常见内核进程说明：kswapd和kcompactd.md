@@ -7,7 +7,8 @@ tags: [Linux]
 
 kswapd内核进程在每个numa节点上运行一个，该线程每100毫秒起来工作一次，或者由于别的进程分配内存失败，而被唤醒。
 
-```# ps -eF|grep kswap
+```
+# ps -eF|grep kswap
 root         315       2  0     0     0  38 Apr22 ?        00:00:55 [kswapd0]
 root         316       2  0     0     0  27 Apr22 ?        00:00:57 [kswapd1]
 ```
