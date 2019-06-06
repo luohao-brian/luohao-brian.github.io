@@ -11,12 +11,12 @@ tags: [Linux]
 内核模块方式的驱动一般在init ramdisk中，在grub中用initrd参数指定:
 
 ```
-menuentry 'Debian GNU/Linux' --class debian --class gnu-linux --class gnu --class os $menuentry_id_option 'gnulinux-simple-708d38e3-f6b2-43ea-a164-6233d1f0d5b6' {
-	...
+menuentry 'Debian GNU/Linux' {
+    ...
     echo	'Loading Linux 4.19.28 ...'
-	linux	/boot/vmlinuz-4.19.28 root=UUID=708d38e3-f6b2-43ea-a164-6233d1f0d5b6 ro cgroup_enable=memory swapaccount=1 intel_idle.max_cstate=0 processor.max_cstate=0 net.ifnames=1 biosdevname=0 nopti intel_iommu=on crashkernel=1G-:512M quiet
-	echo	'Loading initial ramdisk ...'
-	initrd	/boot/initrd.img-4.19.28
+    linux	/boot/vmlinuz-4.19.28 root=UUID=...
+    echo	'Loading initial ramdisk ...'
+    initrd	/boot/initrd.img-4.19.28
 }
 ```
 
