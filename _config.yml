@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: luohao-brian@gmail.com
 description: "高调做事,<br/>低调做人..."
 keyword: "前端技术,云计算,虚拟化,硬件平台,Golang,Python,人工智能,Web"
-url: "https://ygjs.tech"              # your host, for absolute URL
+url: "https://luohao-brian.github.io/"              # your host, for absolute URL
 baseurl: ""                           # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -30,7 +30,7 @@ anchorjs: true                          # if you want to customize anchor. check
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
 gems: [jekyll-paginate, jekyll-seo-tag]
-
+plugins: [jekyll-paginate, jekyll-seo-tag]
 
 
 # Markdown settings
@@ -39,7 +39,7 @@ gems: [jekyll-paginate, jekyll-seo-tag]
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
+input: GFM                            # use Github Flavored Markdown !important
 
 
 
